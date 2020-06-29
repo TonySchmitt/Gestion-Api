@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/apache/Dockerfile
+    ports: 
+      - 8120:8000
+    volumes:
+      - ./docker/apache/sites-enabled/GestionApi.conf:/etc/apache2/sites-enabled/GestionApi.conf
+      - ./:/var/www/html/GestionApi/
+    networks: 
+      - app
+
+networks: 
+  app:
+    driver: bridge

@@ -1,0 +1,26 @@
+{
+    "type": "bundle",
+    "name": "tonyschmitt/gestion-api",
+    "description": "$descriptionProjet",
+    "require": {
+        "php": "^7.4",
+        "friendsofsymfony/rest-bundle": "^3.0",
+        "jms/serializer-bundle": "^3.6",
+        "symfony/http-kernel": "^5.0",
+        "symfony/framework-bundle": "^5.0"
+    },
+    "require-dev": {
+        "symfony/yaml": "^5.0",
+        "symfony/phpunit-bridge": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TonySchmitt\\GestionApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TonySchmitt\\GestionApi\\Tests\\": "tests/"
+        }
+    }
+}
