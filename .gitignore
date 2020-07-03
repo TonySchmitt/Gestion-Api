@@ -7,3 +7,4 @@
 /.scannerwork
 /.idea
 .phpunit.result.cache
+.sonar-project.properties
