@@ -11,8 +11,12 @@ class ApiException extends \Exception
      */
     private $messageRetour;
 
-    public function __construct(int $code = 0, string $message = "", ?string $messageRetour = null, Throwable $previous = null)
-    {
+    public function __construct(
+        int $code = 0,
+        string $message = "",
+        ?string $messageRetour = null,
+        Throwable $previous = null
+    ) {
         $this->messageRetour = $messageRetour;
         parent::__construct($message, $code, $previous);
     }

@@ -108,7 +108,8 @@ class ExceptionSubscriberTest extends TestCase
     /**
      * @dataProvider dataReturnExceptionProvider
      */
-    public function testReturnException($exception, $code, $message) {
+    public function testReturnException($exception, $code, $message)
+    {
         $kernel = $this->createMock(HttpKernelInterface::class);
         $request = $this->createMock(Request::class);
         $event = new ExceptionEvent($kernel, $request, 1, $exception);
@@ -153,10 +154,15 @@ class ExceptionSubscriberTest extends TestCase
     }
 }
 
+// phpcs:ignore
 class ApiTestException extends ApiException
 {
-    public function __construct(string $message = "", string $messageRetour = null, int $code, Throwable $previous = null)
-    {
+    public function __construct(
+        string $message = "",
+        string $messageRetour = null,
+        int $code,
+        Throwable $previous = null
+    ) {
         parent::__construct($code, $message, $messageRetour, $previous);
     }
 }

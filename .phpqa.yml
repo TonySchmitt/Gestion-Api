@@ -1,0 +1,16 @@
+phpqa:
+  tools:
+    - phpmetrics
+    - phpcs:0
+    - phpmd:0
+    - phpstan:0
+    - phpcpd:0
+    - parallel-lint:0
+    - psalm:0
+  ignoredDirs: build,vendor,bin,var/cache,tests
+  ignoredFiles: public/index.php,config/bootstrap.php,src/Kernel.php
+  anlayzedDirs: src
+  report: true
+
+phpcs:
+  standard: PSR2
