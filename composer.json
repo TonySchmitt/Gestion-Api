@@ -3,7 +3,7 @@
     "name": "tonyschmitt/gestion-api",
     "description": "$descriptionProjet",
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 | ^8.0",
         "friendsofsymfony/rest-bundle": "^3.0",
         "jms/serializer-bundle": "^3.6",
         "symfony/http-kernel": "^5.0",
